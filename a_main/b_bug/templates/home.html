@@ -1,5 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
- <h1>Abc</h1>
+<h1>All MSG Data</h1>
+{% if messages %}
+<ul>
+    {% for message in messages %}
+    <li>{{message}}</li>
+    {% endfor %}
+</ul>
+{% else %}
+    <p>No message</p>
+{% endif %}
+
+
 {% endblock content %}
